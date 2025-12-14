@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*-
 __doc__ = """{f}
 Usage:
-  {f} (-m <m3u>) [-s <sf2>]
+  {f} (-m <m3u>) (-s <sf2>)
   {f} (-h | --help)
 
 Options:
   -h --help   Show this screen.
   -m <m3u>    M3U Path (required)
-  -s <sf2>    SF2 Path (optional) [default: ]
+  -s <sf2>    SF2 Path (required)
 """.format(f=__file__)
 
 from docopt import docopt

@@ -2,13 +2,12 @@
 # -*- coding: utf-8 -*-
 __doc__ = """{f}
 Usage:
-  {f} (-m <m3u>)
+  {f} (-i <m3u> | --input <m3u>)
   {f} (-h | --help)
 
 Options:
-  -h --help  Show this screen.
-  -l <loop>   Loop count (optional) [default: 1]
-  -m <m3u>   M3U Path (required)
+  -i <m3u>, --input <m3u>   M3U path. (required)
+  -h, --help                Show this screen.
 """.format(f=__file__)
 
 from docopt import docopt
@@ -34,4 +33,4 @@ def play_mid(m3u):
 
 if __name__ == "__main__":
   args = docopt(__doc__)
-  main(int(args['-l']), args['-m'])
+  main(args['--input'])

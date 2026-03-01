@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*-
 __doc__ = """{f}
 Usage:
-  {f} (-m <m3u>) (-s <sf2>)
+  {f} (-i <m3u> | --input <m3u>) (-s <sf2> | --sf2 <sf2>)
   {f} (-h | --help)
 
 Options:
-  -h --help   Show this screen.
-  -m <m3u>    M3U Path (required)
-  -s <sf2>    SF2 Path (required)
+  -h --help                    Show this screen.
+  -i <m3u>, --input <m3u>      M3U Path (required)
+  -s <sf2>, --soundfont <sf2>  SF2 Path (required)
 """.format(f=__file__)
 
 from docopt import docopt
@@ -33,4 +33,4 @@ def play_mid(m3u, sf2):
 
 if __name__ == "__main__":
   args = docopt(__doc__)
-  main(args['-m'], args['-s'])
+  main(args['--input'], args['--soundfont'])
